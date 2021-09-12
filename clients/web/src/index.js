@@ -6,7 +6,9 @@ import { store } from './redux/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import {
-  BrowserRouter as Router
+  // BrowserRouter as Router
+  // use hashrouter instead of browserRouter to fix subdir issue for github page.
+  HashRouter as Router 
 } from 'react-router-dom';
 
 ReactDOM.render(
