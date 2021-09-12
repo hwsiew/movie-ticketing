@@ -11,9 +11,9 @@ const dev = {
 
 // production configuration
 const prod = {
-	protocol: "http",
-	host: "localhost:8080",
-}
+	protocol: "https",
+	host: "murmuring-wildwood-07967.herokuapp.com",
+};
 
 const enviroment = process.env.REACT_APP_ENV === 'development' ? dev : prod;
 
