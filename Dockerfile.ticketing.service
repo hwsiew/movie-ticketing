@@ -4,7 +4,7 @@ ARG ROOT_DIR
 
 WORKDIR /app
 COPY ${ROOT_DIR} .
-RUN ./gradlew build 
+RUN bash ./gradlew build 
 
 FROM openjdk
 
