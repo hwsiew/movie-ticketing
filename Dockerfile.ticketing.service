@@ -1,0 +1,14 @@
+FROM gradle:7.2.0-jdk11 AS builder
+
+ARG ROOT_DIR
+
+WORKDIR /app
+COPY ${ROOT_DIR} .
+RUN ./gradlew build 
+
+FROM openjdk
+
+WORKDIR /app
+EXPOSE 8080
+COPY --from=builder /app/build/libs/ticketing-1.0.0.jar .
+CMD [ "java", "-jar", "ticketing-1.0.0.jar" ]
