@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile.ticketing.service
   config: 
-    TICKETING_SERVICE_DIR: ./services/ticketing
+    ROOT_DIR: ./services/ticketing
