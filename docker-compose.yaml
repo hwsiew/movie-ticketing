@@ -19,6 +19,7 @@ services:
       dockerfile: Dockerfile.ticketing.service
       args:
         ROOT_DIR: ${TICKETING_SERVICE_DIR}
+        PORT: 8080
     ports:
       - "8080:8080"
  
