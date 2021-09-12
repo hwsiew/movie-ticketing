@@ -19,8 +19,6 @@ public class Slot {
     @Id
     private String id;
     private String hall;
-    private String[] rows;
-    private String[] cols;
     private LocalDate date;
     private LocalTime startTime;
     private LocalTime endTime;
