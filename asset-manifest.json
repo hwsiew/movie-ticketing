@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/movie-ticketing/static/css/main.943a9449.chunk.css",
+    "main.js": "/movie-ticketing/static/js/main.5a36ac73.chunk.js",
+    "main.js.map": "/movie-ticketing/static/js/main.5a36ac73.chunk.js.map",
+    "runtime-main.js": "/movie-ticketing/static/js/runtime-main.22cc211a.js",
+    "runtime-main.js.map": "/movie-ticketing/static/js/runtime-main.22cc211a.js.map",
+    "static/js/2.95966a4b.chunk.js": "/movie-ticketing/static/js/2.95966a4b.chunk.js",
+    "static/js/2.95966a4b.chunk.js.map": "/movie-ticketing/static/js/2.95966a4b.chunk.js.map",
+    "index.html": "/movie-ticketing/index.html",
+    "static/css/main.943a9449.chunk.css.map": "/movie-ticketing/static/css/main.943a9449.chunk.css.map",
+    "static/js/2.95966a4b.chunk.js.LICENSE.txt": "/movie-ticketing/static/js/2.95966a4b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22cc211a.js",
+    "static/js/2.95966a4b.chunk.js",
+    "static/css/main.943a9449.chunk.css",
+    "static/js/main.5a36ac73.chunk.js"
+  ]
+}
