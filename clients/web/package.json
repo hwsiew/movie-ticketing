@@ -18,9 +18,9 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
-    "start": "cross-env REACT_APP_ENV=dev craco start",
-    "build": "cross-env REACT_APP_ENV=production craco build",
-    "test": "cross-env REACT_APP_ENV=dev craco test",
+    "start": "cross-env REACT_APP_ENV=development craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -12,10 +12,10 @@ const dev = {
 // production configuration
 const prod = {
 	protocol: "http",
-	host: "localhost:8081",
+	host: "localhost:8080",
 }
 
-const enviroment = process.env.REACT_APP_ENV === 'dev' ? dev : prod;
+const enviroment = process.env.REACT_APP_ENV === 'development' ? dev : prod;
 
 const config = {
 	...{
