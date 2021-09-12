@@ -29,6 +29,9 @@ public class TicketingServiceApplication {
 	@Autowired
 	private MongoOperations mongoOperations;
 
+	@Value("${spring.profiles.active:development}")
+  private String activeProfile;
+
 	public static void main(String[] args) {
 		SpringApplication.run(TicketingServiceApplication.class, args);
 	}
@@ -58,6 +61,9 @@ public class TicketingServiceApplication {
 	 */
 	@Bean
 	CommandLineRunner run(MovieRepository movieRepo){
+
+		// log to check current active profile
+		System.out.println("Current Active Profiles: " + activeProfile);
 
 		// delete all previous data
 		mongoOperations.dropCollection(Movie.class);
