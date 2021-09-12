@@ -10,5 +10,6 @@ FROM openjdk
 
 WORKDIR /app
 EXPOSE ${PORT}
+RUN echo ${PORT}
 COPY --from=builder /app/build/libs/ticketing-1.0.0.jar .
 CMD [ "java", "-Dserver.port=$PORT", "-jar", "ticketing-1.0.0.jar" ]
