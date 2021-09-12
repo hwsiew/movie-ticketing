@@ -2,6 +2,12 @@
 
 This project create a functional movie ticket booking application with backend in Spring Boot and frontend in ReactJS. For simplicity, authentication is simulated using sessionStorage. 
 
+## DEMO 
+You can now visit the live page [here](https://hwsiew.github.io/movie-ticketing/).
+- Frontend react application is hosted using using github page.
+- Backend Spring Boot application is hosted in heroku*.
+* Free tier of heroku service shunt down an instance after idle for some time. Therefore, application may be facing slow backend request at the beginning. Kindly be patient and refresh a page when necessary.
+
 ## Design
 - [System Architecture](https://www.figma.com/file/k6w6xsXvHI0KxARSJziDqo/OCBC-Hack-It?node-id=0%3A1)
 - [Database Structure](https://www.figma.com/file/kvmMxz46M5LuWjaeevcLYA/OCBC-hack-it?node-id=0%3A1)
@@ -18,7 +24,7 @@ This project create a functional movie ticket booking application with backend i
 	- MongoDB atlas    - database as a service
 
 ## How To Start Local Development Environment
-1. Navigate to `./clients/web` and run `npm run start` to start frontend.
+1. Navigate to `./clients/web` and run `npm install && npm run start` to start frontend.
 2. Navigate to `./services/ticketing` and run `./gradlew bootRun --args='--spring.profiles.active=development'` to start backend.
 3. Browse `http://localhost:3000` 
 
