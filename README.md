@@ -25,7 +25,7 @@ You can now visit the live page [here](https://hwsiew.github.io/movie-ticketing/
 
 ## How To Start Local Development Environment
 1. Navigate to `./clients/web` and run `npm install && npm run start` to start frontend.
-2. Navigate to `./services/ticketing` and run `./gradlew bootRun --args='--spring.profiles.active=development'` to start backend.
+2. Navigate to `./services/ticketing` and run `gradlew bootRun --args='--spring.profiles.active=development'` to start backend.
 3. Browse `http://localhost:3000` 
 
 ## Deployment Strategies 
