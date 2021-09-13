@@ -14,7 +14,8 @@ import {
 } from '../../redux/noticeSlice';
 import {
 	selectUser,
-	userBookTickets
+	userBookTickets,
+	selectStatus
 } from '../../redux/userSlice';
 import MovieCard from "../MovieCard";
 import Seat from './Seat';
@@ -29,6 +30,7 @@ export default function MovieTheater (props) {
 	const user = useSelector(selectUser);	// current user
 	const movie = useSelector(selectMovie(movieId)); // movie details
 	const status = useSelector(selectMovieStatus);
+	const userStatus = useSelector(selectStatus);
 	const [seatSelected, setSeatSelected] = useState([]);
 	const [dateSelected, setDateSelected] = useState("");
 	const [timeSelected, setTimeSelected] = useState("");
@@ -78,7 +80,7 @@ export default function MovieTheater (props) {
 
 	const proceedBtnCls = classNames(
 		'mt-3 border rounded  text-white p-2 text-lg font-medium',
-		!seatSelected.length || !user? 'bg-gray-300' : 'bg-green-400'
+		!seatSelected.length || !user || userStatus === 'loading'? 'bg-gray-300' : 'bg-green-400'
 	);
 
 	const loginReminderCls = classNames(
@@ -134,6 +136,7 @@ export default function MovieTheater (props) {
 		.then(tickets => {
 			// update seat(s) availability
 			dispatch(updateSeatAvailability(tickets));	
+			alert('Ticket successfully booked!');
 		})
 		.catch(err => {
 			dispatch(error(err));
@@ -184,7 +187,7 @@ export default function MovieTheater (props) {
 								<button 
 									className={proceedBtnCls} 
 									onClick={handleSeatBooking}
-									disabled={!seatSelected.length || !user}
+									disabled={!seatSelected.length || !user || userStatus === 'loading'}
 								>Book Now</button>
 								<div className={loginReminderCls}>Please login to proceed.</div>
 							</div>

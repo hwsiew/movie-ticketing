@@ -80,6 +80,9 @@ export const userSlice = createSlice({
         state.status = 'idle';
         state.tickets.push(...action.payload);
       })
+      .addCase(userBookTickets.rejected, (state, action) => {
+        state.status = 'idle';
+      })
       .addCase(getTickets.pending, (state) => {
         state.status = 'loading';
       })
