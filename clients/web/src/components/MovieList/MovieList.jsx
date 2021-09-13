@@ -8,7 +8,8 @@ import {
 	selectMovieStatus
 } from '../../redux/movieSlice';
 import {
-	error 
+	error,
+	info
 } from '../../redux/noticeSlice';
 
 /**
@@ -30,6 +31,12 @@ export default function MovieList (props) {
 	useEffect(function(){
 		dispatch(fetchAllMovies())
 		.unwrap()
+		.then(m => {
+			// Free tier of heroku shunt down instance after idle for some time. 
+			//So the application might start up slow at the beginning.
+			if(!m.length) 
+				dispatch(info({message:'Server is starting up. Please refresh the page...'}));
+		})
 		.catch(e => {
 			dispatch(error(e))
 		})
