@@ -17,12 +17,19 @@ export const noticeSlice = createSlice({
     // dismiss an error
     dismissError: (state) => {
       state.error = null;
+    },
+    info: (state, action) => {
+      state.info = action.payload;
+    },
+    dismissInfo: (state, action) => {
+      state.info = null;
     }
   },
   
 });
 
-export const { error, dismissError } = noticeSlice.actions;
+export const { error, dismissError, info, dismissInfo } = noticeSlice.actions;
 export const selectError = (state) => state.noticeService.error;
+export const selectInfo = (state) => state.noticeService.info;
 
 export default noticeSlice.reducer;

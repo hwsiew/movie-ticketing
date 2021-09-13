@@ -2,7 +2,9 @@ import classNames from "classnames"
 import { useSelector, useDispatch } from 'react-redux';
 import {
 	selectError,
-	dismissError
+	dismissError,
+	selectInfo,
+	dismissInfo,
 } from '../../redux/noticeSlice';
 
 /**
@@ -11,12 +13,19 @@ import {
 export default function Notice (props){
 
 	const error = useSelector(selectError);
+	const info  = useSelector(selectInfo);
 	const dispatch = useDispatch();
 
-	const rootCls = classNames('flex justify-center items-center', 'rounded', 'bg-red-100', 'p-3', 'text-red-500','my-2');
+	const rootCls = classNames('flex justify-center items-center', 'rounded',  'p-3', 'my-2');
+	const errorRootCls = classNames( rootCls, 'text-red-500', 'bg-red-100' );
+	const infoRootCls  = classNames( rootCls, 'text-blue-500', 'bg-blue-100')
 
-	const handleClose = function () {
+	const handleErrorClose = function () {
 		dispatch(dismissError());
+	}
+
+	const handleInfoClose = function () {
+		dispatch(dismissInfo());
 	}
 
 	return (
@@ -24,11 +33,21 @@ export default function Notice (props){
 			{ 
 				error && 
 				<div 
-					className={rootCls}>
+					className={errorRootCls}>
 					<span className="flex-grow" >{error.message}</span>
 					<button 
 						className="rounded-full h-6 w-6 bg-white flex justify-center items-center font-bold text-xl" 
-						onClick={handleClose}><span>&times;</span></button>
+						onClick={handleErrorClose}><span>&times;</span></button>
+				</div>
+			}
+			{ 
+				info && 
+				<div 
+					className={infoRootCls}>
+					<span className="flex-grow" >{info.message}</span>
+					<button 
+						className="rounded-full h-6 w-6 bg-white flex justify-center items-center font-bold text-xl" 
+						onClick={handleInfoClose}><span>&times;</span></button>
 				</div>
 			}
 		</>
