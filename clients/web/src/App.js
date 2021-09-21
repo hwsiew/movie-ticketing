@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import {
   Switch,
   Route,
@@ -9,7 +9,8 @@ import MovieList from './components/MovieList';
 import User from './components/User';
 import MovieTheater from './components/MovieTheater';
 import TicketList from './components/TicketList';
-import Notice from './components/Notice';
+
+const Notice = React.lazy(() => import('./components/Notice'));
 
 /**
  * Simple Logo
@@ -33,7 +34,9 @@ function App() {
         <User></User>
       </AppBar>
       <div className="p-3">
-        <Notice></Notice>
+        <Suspense fallback={<div></div>}>
+          <Notice></Notice>
+        </Suspense>
         <Switch>
           <Route path="/movie/:movieId">
             <MovieTheater></MovieTheater>
