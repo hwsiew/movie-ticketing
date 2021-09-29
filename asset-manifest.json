@@ -1,20 +1,22 @@
 {
   "files": {
     "main.css": "/movie-ticketing/static/css/main.6530b411.chunk.css",
-    "main.js": "/movie-ticketing/static/js/main.8853de83.chunk.js",
-    "main.js.map": "/movie-ticketing/static/js/main.8853de83.chunk.js.map",
-    "runtime-main.js": "/movie-ticketing/static/js/runtime-main.22cc211a.js",
-    "runtime-main.js.map": "/movie-ticketing/static/js/runtime-main.22cc211a.js.map",
-    "static/js/2.d1176ec5.chunk.js": "/movie-ticketing/static/js/2.d1176ec5.chunk.js",
-    "static/js/2.d1176ec5.chunk.js.map": "/movie-ticketing/static/js/2.d1176ec5.chunk.js.map",
+    "main.js": "/movie-ticketing/static/js/main.aa093860.chunk.js",
+    "main.js.map": "/movie-ticketing/static/js/main.aa093860.chunk.js.map",
+    "runtime-main.js": "/movie-ticketing/static/js/runtime-main.e765b968.js",
+    "runtime-main.js.map": "/movie-ticketing/static/js/runtime-main.e765b968.js.map",
+    "static/js/2.5013da20.chunk.js": "/movie-ticketing/static/js/2.5013da20.chunk.js",
+    "static/js/2.5013da20.chunk.js.map": "/movie-ticketing/static/js/2.5013da20.chunk.js.map",
+    "static/js/3.4448aa41.chunk.js": "/movie-ticketing/static/js/3.4448aa41.chunk.js",
+    "static/js/3.4448aa41.chunk.js.map": "/movie-ticketing/static/js/3.4448aa41.chunk.js.map",
     "index.html": "/movie-ticketing/index.html",
     "static/css/main.6530b411.chunk.css.map": "/movie-ticketing/static/css/main.6530b411.chunk.css.map",
-    "static/js/2.d1176ec5.chunk.js.LICENSE.txt": "/movie-ticketing/static/js/2.d1176ec5.chunk.js.LICENSE.txt"
+    "static/js/2.5013da20.chunk.js.LICENSE.txt": "/movie-ticketing/static/js/2.5013da20.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.22cc211a.js",
-    "static/js/2.d1176ec5.chunk.js",
+    "static/js/runtime-main.e765b968.js",
+    "static/js/2.5013da20.chunk.js",
     "static/css/main.6530b411.chunk.css",
-    "static/js/main.8853de83.chunk.js"
+    "static/js/main.aa093860.chunk.js"
   ]
 }
